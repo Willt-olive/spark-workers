@@ -18,6 +18,10 @@ def get_api_key() -> str:
 def hello():
     return send_file(os.path.join(os.path.dirname(__file__), 'index.html'))
 
+@app.route("/second")
+def hello():
+    return send_file(os.path.join(os.path.dirname(__file__), 'second.html'))
+
 @app.route("/test")
 def test():
     #return "Test" # testing 

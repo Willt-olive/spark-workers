@@ -2,9 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Chad</title>
+    <title>Button</title>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://i.ytimg.com/vi/1M_oZgVBknw/maxresdefault.jpg') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
 <body>
-    <p>Whats up my fellow mammals</p>
+    <button onclick="location.href='second.html'">Go to Second Page</button>
 </body>
 </html>
