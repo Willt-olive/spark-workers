@@ -23,14 +23,19 @@ def test():
     #return "Test" # testing 
     return(get_api_key())
 
-@app.route("/add",methods=['GET','POST'])
+@app.route("/add", methods=['GET', 'POST'])
 def add():
-  if request.method=='GET':
-    return "Use post to add" # replace with form template
-  else:
-    token=get_api_key()
-    ret = addWorker(token,request.form['num'])
-    return ret
+    if request.method == 'GET':
+        return "Use post to add"  # replace with form template
+    elif request.method == 'POST':
+        try:
+            data = request.get_json()
+            num = data['num']
+            token = get_api_key()
+            ret = addWorker(token, num)
+            return jsonify({"result": ret})
+        except Exception as e:
+            return jsonify({"error": str(e)}), 400
 
 
 def addWorker(token, num):
