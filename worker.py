@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, send_file
 from flask import request
 import requests
 import os
@@ -17,10 +17,6 @@ def get_api_key() -> str:
 @app.route("/")
 def hello():
     return send_file(os.path.join(os.path.dirname(__file__), 'index.html'))
-
-@app.route("/second")
-def hello():
-    return send_file(os.path.join(os.path.dirname(__file__), 'second.html'))
 
 @app.route("/test")
 def test():
