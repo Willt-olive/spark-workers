@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>GetStuff</title>
-<style>
+    <title>Home</title>
+    <style>
         body {
             margin: 0;
             padding: 0;
@@ -13,14 +13,35 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <form action="/add" method="post">
-        <label for="num">Enter a number:</label>
-        <input type="number" name="num" id="num" required>
-        <button type="submit">Add Number</button>
-    </form>
+    <h1>Hello There</h1>
+    <p>General Kenobi</p>
+    <button onclick="alert('Hello there')">Get Started</button>
 </body>
 </html>
