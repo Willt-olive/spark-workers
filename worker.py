@@ -16,7 +16,7 @@ def get_api_key() -> str:
       
 @app.route("/")
 def hello():
-    return "Add workers to the Spark cluster with a POST request to add"
+    return send_file(os.path.join(os.path.dirname(__file__), 'index.html'))
 
 @app.route("/test")
 def test():
