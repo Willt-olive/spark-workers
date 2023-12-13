@@ -14,23 +14,13 @@
             justify-content: center;
             flex-direction: column;
         }
-
-        button {
-            background-color: #3498db;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background-color: #2980b9;
-        }
     </style>
 </head>
 <body>
-    <button onclick="location.href='second.html'">Go to Second Page</button>
+    <form action="/add" method="post">
+        <label for="num">Enter a number:</label>
+        <input type="number" name="num" id="num" required>
+        <button type="submit">Add Number</button>
+    </form>
 </body>
 </html>
